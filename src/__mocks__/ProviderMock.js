@@ -10,7 +10,7 @@ const store = createStore(reducer, initialState);
 const history = createBrowserHistory();
 
 const ProviderMock = (props) => (
-  <Provider>
+  <Provider store={store}>
     <Router history={history}>{props.children}</Router>
   </Provider>
 );
